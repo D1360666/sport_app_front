@@ -4,10 +4,9 @@ import { HomeComponent } from "./pages/home/home.component";
 import { PersonasComponent } from "./pages/personas/personas.component";
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, HomeComponent, PersonasComponent],
-  template: `
+    selector: 'app-root',
+    imports: [RouterOutlet, HomeComponent, PersonasComponent],
+    template: `
       <main>
       <header class="brand-name">
         <img class="brand-logo" src="/assets/logo.svg"
@@ -19,9 +18,8 @@ import { PersonasComponent } from "./pages/personas/personas.component";
       </section>
       </main>
   `,
-
-  //templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+    //templateUrl: './app.component.html',
+    styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'sportapp';

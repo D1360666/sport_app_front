@@ -5,12 +5,10 @@ import { CommonModule } from '@angular/common';
 
 
 @Component({
-  selector: 'app-personas',
-  standalone: true,
-  imports: [FormsModule, CommonModule],
-  templateUrl: './personas.component.html',
-  styleUrl: './personas.component.css',
-  
+    selector: 'app-personas',
+    imports: [FormsModule, CommonModule],
+    templateUrl: './personas.component.html',
+    styleUrl: './personas.component.css'
 })
 export class PersonasComponent {
   @Input() nueva: Persona={
