@@ -6,6 +6,7 @@ import { PersonasComponent } from "./pages/personas/personas.component";
 @Component({
     selector: 'app-root',
     imports: [RouterOutlet, HomeComponent, PersonasComponent],
+    standalone:true,
     template: `
       <main>
       <header class="brand-name">

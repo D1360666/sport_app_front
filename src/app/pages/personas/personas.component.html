@@ -2,12 +2,36 @@
 <hr>
 
 <form (ngSubmit)="agregar()">
+
+    <!-- number -->
+    <div class="card flex justify-center">
+        <input type="number" pInputText [(ngModel)]="nueva.cedula" name = "cedula" placeholder="Ingrese cedula" />
+    </div>
+    <!-- text -->
+    <div class="card flex justify-center">
+        <input type="text" pInputText [(ngModel)]="nueva.nombre" name = "nombre" placeholder="Ingrese nombre" />
+    </div>
+    <div class="card flex justify-center">
+        <input type="text" pInputText [(ngModel)]="nueva.apellido" name = "apellido" placeholder="Ingrese apellido"/>
+    </div>
+ <!-- fecha -->
+    <p-datepicker formControlName="date" [(ngModel)]="nueva.fechaNac" dateFormat="dd.mm.yy" name ="fechaNac" />
+
+    <div class="card flex justify-center">
+        <input type="number" pInputText [(ngModel)]="nueva.cedula" name = "cedula" />
+    </div>
+    <div class="card flex justify-center">
+        <input type="number" pInputText [(ngModel)]="nueva.cedula" name = "cedula" />
+    </div>
+<!--
     <input [(ngModel)]="nueva.cedula" [ngModelOptions]="{standalone: true}"
         type="number" 
         placeholder="Cédula"
         name="cedula"
         
     />
+
+
     <input [(ngModel)]="nueva.nombre" [ngModelOptions]="{standalone: true}"
         type="text" 
         placeholder="Nombre"
@@ -40,13 +64,18 @@
         name="telefono"
         
     />
-    <select [(ngModel)]="nueva.tipo" [ngModelOptions]="{standalone: true}">
+-->
+    <div class="card flex justify-center">
+        <p-select [options]="personType" [ngModelOptions]="{standalone:true}" [(ngModel)]="nueva.tipo" optionLabel="name" placeholder="Seleccione tipo" class="w-full md:w-56" />
+    </div>
+
+   <!-- <select [(ngModel)]="nueva.tipo" [ngModelOptions]="{standalone: true}">
         <option value="1" >Jugador</option>
         <option value="2" selected>Responsable</option>
-        <option value="3">Técnico</option>
         <option value="4">Canchero</option>
         <option value="5">Delegado</option>
       </select>
+    -->
 
       tipo: {{nueva.tipo}}
 <!-- Forma de capturar evento de forma rapida y de enlazar un objeto 
